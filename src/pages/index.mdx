@@ -3,15 +3,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 # Introduction
 
 <Card className="mt-4">
-  <CardHeader>
-    <CardTitle>
-      Welcome to Nextra!
-    </CardTitle>
-  </CardHeader>
-  <CardContent>
-    <p>This is a docs template configured with Tailwind CSS and shadcn/ui 🚀</p>
-    <p>This is a card component from shadcn/ui ⚡</p>
-  </CardContent>
+ <CardHeader>
+   <CardTitle className="flex items-center gap-2">
+     <span className="icon-[lucide--home] w-6 h-6 mt-6"></span>
+     Welcome to Nextra!
+   </CardTitle>
+ </CardHeader>
+ <CardContent>
+   <p>This is a docs template configured with Tailwind CSS and shadcn/ui 🚀</p>
+   <p>This is a card component from shadcn/ui ⚡</p>
+ </CardContent>
 </Card>
 
 ## What is Nextra?

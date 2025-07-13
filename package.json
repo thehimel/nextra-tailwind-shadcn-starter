@@ -19,6 +19,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.357",
+    "@iconify/tailwind": "^1.2.0",
     "@types/node": "18.11.10",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
