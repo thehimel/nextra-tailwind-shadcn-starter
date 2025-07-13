@@ -1,5 +1,5 @@
 import React from 'react'
-import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
+import {DocsThemeConfig, ThemeSwitch, useConfig} from "nextra-theme-docs";
 import { useRouter } from 'next/router'
 
 const BRAND_NAME = 'Core'
@@ -14,8 +14,22 @@ const config: DocsThemeConfig = {
     link: 'https://discord.com',
   },
   docsRepositoryBase: 'https://github.com',
+  toc: {
+    backToTop: true,
+  },
   footer: {
-    text: 'Docs Template',
+    text: `© 2024 ${BRAND_NAME}`,
+  },
+  sidebar: {
+    toggleButton: true,
+  },
+  themeSwitch: {
+    component: null  // Hide the theme switch from sidebar
+  },
+  navbar: {
+      extraContent: () => {
+          return <ThemeSwitch />;  // Add theme switch on the navbar
+      },
   },
   useNextSeoProps() {
     const { asPath } = useRouter()
