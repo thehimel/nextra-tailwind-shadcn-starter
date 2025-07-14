@@ -2,7 +2,8 @@ import React from 'react'
 import {DocsThemeConfig, ThemeSwitch, useConfig} from "nextra-theme-docs";
 import { useRouter } from 'next/router'
 
-const BRAND_NAME = 'Core'
+const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME || "Core";
+const ORGANIZATION_NAME = process.env.NEXT_PUBLIC_ORZANIZATION_NAME || "Core";
 const REPO = "https://github.com/thehimel/nextra-tailwind-shadcn-starter"
 
 const config: DocsThemeConfig = {
@@ -18,7 +19,7 @@ const config: DocsThemeConfig = {
     backToTop: true,
   },
   footer: {
-    text: `© 2024 ${BRAND_NAME}`,
+    text: `© 2025 ${ORGANIZATION_NAME}`,
   },
   sidebar: {
     toggleButton: true,
