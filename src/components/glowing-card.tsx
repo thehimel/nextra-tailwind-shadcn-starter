@@ -1,7 +1,7 @@
 "use client";
 
-import { Star } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
+import {GlowingEffect} from "@/components/ui/glowing-effect";
+import {Star} from "lucide-react";
 import React from "react";
 
 interface GlowingCardProps {
@@ -17,7 +17,7 @@ const GlowingCard = ({
   className = "",
   icon = <Star className="h-4 w-4 text-black dark:text-neutral-400" />,
   title = "Feature Title",
-  description = "This is a generic description for the card component."
+  description
 }: GlowingCardProps) => {
   return (
     <div className={`${area} ${className}`}>
@@ -35,15 +35,16 @@ const GlowingCard = ({
               <div className="w-fit rounded-lg border border-gray-600 p-2">
                 {icon}
               </div>
-              <h3 className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
+              <h3
+                className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-black md:text-2xl/[1.875rem] dark:text-white">
                 {title}
               </h3>
             </div>
-            <div className="space-y-3">
+            {description && <div className="space-y-3">
               <div className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
                 {description}
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
